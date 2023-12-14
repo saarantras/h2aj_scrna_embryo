@@ -1,3 +1,6 @@
+Using cellranger-7.2.0
+Steps that contain `conda activate arr` can be reproduced by creating a conda environment from the included `arr.yml` file. You will have to modify the paths with your username. 
+
 This workflow reproduces the analysis of the following paper:
 
 Molè, M.A., Coorens, T.H.H., Shahbazi, M.N. et al. A single cell characterisation of human embryogenesis identifies pluripotency transitions and putative anterior hypoblast centre. Nat Commun 12, 3679 (2021). https://doi.org/10.1038/s41467-021-23758-w

@@ -1,4 +1,4 @@
-This workflow builds on the work of the following paper:
+This workflow (IS INCOMPLETE) builds on the work of the following paper:
 
 Xiang, L., Yin, Y., Zheng, Y. et al. A developmental landscape of 3D-cultured human pre-gastrulation embryos. Nature 577, 537–542 (2020). https://doi.org/10.1038/s41586-019-1875-y
 

@@ -1,0 +1,5 @@
+This script generates matricies containig expression counts of observations of each gene in each cell (commonly called a count matrix) from RNA sequencing data, which has been downloaded and re-arranged in previous steps.
+
+Note that this was run three times, since the first time some of the samples were not appropriately processed due to a naming problem. The scripts are all identical, except that the second and third execution's array's were restricted to the ones that didn't work...
+
+See reademe in previous step for more specifics on the naming confusion. The moral of the story is: cellranger is very particular about filenames.

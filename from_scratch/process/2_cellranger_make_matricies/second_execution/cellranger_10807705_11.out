@@ -1,0 +1,3 @@
+ERROR: Requested sample(s) not found in fastq directory "/vast/palmer/scratch/reilly/mcn26/from_scratch/raw_fastq/Embryo9"
+Available samples:
+Embryo9_S1

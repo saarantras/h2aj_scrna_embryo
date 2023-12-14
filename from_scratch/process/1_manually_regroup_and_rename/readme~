@@ -1,0 +1,242 @@
+The various fastq files I am to analyize have very confusing names. Additionally, they are provided just all sort of thrown in a directory together, with no organization. Therefore, I manually regrouped the files by sample. 
+
+This regrouping based on names provided by : https://www.ebi.ac.uk/biostudies/arrayexpress/studies/E-MTAB-8060/sdrf ("individual" column)
+
+I chose the "individual" column instead of the "sample" column since it appeared to be what was used by EarlyEmbryo_scRNA/scRNA_embryo_data_process.R
+(see README for origin of this R script)
+
+raw fastq directory before regrouping:
+.
+├── 5354STDY7646912_S1_L001_I1_001.fastq.gz
+├── 5354STDY7646912_S1_L001_R1_001.fastq.gz
+├── 5354STDY7646912_S1_L001_R2_001.fastq.gz
+├── 5354STDY7646913_S1_L001_I1_001.fastq.gz
+├── 5354STDY7646913_S1_L001_R1_001.fastq.gz
+├── 5354STDY7646913_S1_L001_R2_001.fastq.gz
+├── 5354STDY7752806_S1_L001_I1_001.fastq.gz
+├── 5354STDY7752806_S1_L001_R1_001.fastq.gz
+├── 5354STDY7752806_S1_L001_R2_001.fastq.gz
+├── 5354STDY7752807_S1_L001_I1_001.fastq.gz
+├── 5354STDY7752807_S1_L001_R1_001.fastq.gz
+├── 5354STDY7752807_S1_L001_R2_001.fastq.gz
+├── 5354STDY7758312-1.fastq.gz
+├── 5354STDY7758312-2.fastq.gz
+├── 5354STDY7758313-1.fastq.gz
+├── 5354STDY7758313-2.fastq.gz
+├── 5354STDY7758314_S1_L001_I1_001.fastq.gz
+├── 5354STDY7758314_S1_L001_R1_001.fastq.gz
+├── 5354STDY7758314_S1_L001_R2_001.fastq.gz
+├── 5354STDY7758315_S1_L001_I1_001.fastq.gz
+├── 5354STDY7758315_S1_L001_R1_001.fastq.gz
+├── 5354STDY7758315_S1_L001_R2_001.fastq.gz
+├── 5354STDY7954888-1.fastq.gz
+├── 5354STDY7954888-2.fastq.gz
+├── 5354STDY7954889-1.fastq.gz
+├── 5354STDY7954889-2.fastq.gz
+├── 5354STDY7954890-1.fastq.gz
+├── 5354STDY7954890-2.fastq.gz
+├── 5354STDY8788462-1.fastq.gz
+├── 5354STDY8788462-2.fastq.gz
+├── 5354STDY8788463-1.fastq.gz
+├── 5354STDY8788463-2.fastq.gz
+├── 5354STDY8795378-1.fastq.gz
+├── 5354STDY8795378-2.fastq.gz
+├── 5354STDY8795379-1.fastq.gz
+├── 5354STDY8795379-2.fastq.gz
+├── E-MTAB-8060.idf.txt
+├── E-MTAB-8060.idf.txt_original
+└── E-MTAB-8060.sdrf.txt
+
+0 directories, 39 files
+
+after regrouping:
+
+.
+├── Embryo1
+│   ├── 5354STDY7646912_S1_L001_I1_001.fastq.gz
+│   ├── 5354STDY7646912_S1_L001_R1_001.fastq.gz
+│   └── 5354STDY7646912_S1_L001_R2_001.fastq.gz
+├── Embryo10
+│   ├── 5354STDY7954889-1.fastq.gz
+│   └── 5354STDY7954889-2.fastq.gz
+├── Embryo11
+│   ├── 5354STDY7954890-1.fastq.gz
+│   └── 5354STDY7954890-2.fastq.gz
+├── Embryo2
+│   ├── 5354STDY7646913_S1_L001_I1_001.fastq.gz
+│   ├── 5354STDY7646913_S1_L001_R1_001.fastq.gz
+│   └── 5354STDY7646913_S1_L001_R2_001.fastq.gz
+├── Embryo3
+│   ├── 5354STDY7752806_S1_L001_I1_001.fastq.gz
+│   ├── 5354STDY7752806_S1_L001_R1_001.fastq.gz
+│   └── 5354STDY7752806_S1_L001_R2_001.fastq.gz
+├── Embryo4
+│   ├── 5354STDY7752807_S1_L001_I1_001.fastq.gz
+│   ├── 5354STDY7752807_S1_L001_R1_001.fastq.gz
+│   └── 5354STDY7752807_S1_L001_R2_001.fastq.gz
+├── Embryo5
+│   ├── 5354STDY7758312-1.fastq.gz
+│   └── 5354STDY7758312-2.fastq.gz
+├── Embryo6
+│   ├── 5354STDY7758313-1.fastq.gz
+│   └── 5354STDY7758313-2.fastq.gz
+├── Embryo7
+│   ├── 5354STDY7758314_S1_L001_I1_001.fastq.gz
+│   ├── 5354STDY7758314_S1_L001_R1_001.fastq.gz
+│   └── 5354STDY7758314_S1_L001_R2_001.fastq.gz
+├── Embryo8
+│   ├── 5354STDY7758315_S1_L001_I1_001.fastq.gz
+│   ├── 5354STDY7758315_S1_L001_R1_001.fastq.gz
+│   └── 5354STDY7758315_S1_L001_R2_001.fastq.gz
+├── Embryo9
+│   ├── 5354STDY7954888-1.fastq.gz
+│   └── 5354STDY7954888-2.fastq.gz
+├── MPlex1
+│   ├── 5354STDY8788462-1.fastq.gz
+│   └── 5354STDY8788462-2.fastq.gz
+├── MPlex2
+│   ├── 5354STDY8788463-1.fastq.gz
+│   └── 5354STDY8788463-2.fastq.gz
+├── MPlex3
+│   ├── 5354STDY8795378-1.fastq.gz
+│   └── 5354STDY8795378-2.fastq.gz
+└── MPlex4
+    ├── 5354STDY8795379-1.fastq.gz
+    └── 5354STDY8795379-2.fastq.gz
+
+15 directories, 36 files
+
+Cellranger expects concordent filenames, so i modified the filenames to the following:
+
+.
+├── Embryo1
+│   ├── Embryo1_S1_L001_I1_001.fastq.gz
+│   ├── Embryo1_S1_L001_R1_001.fastq.gz
+│   └── Embryo1_S1_L001_R2_001.fastq.gz
+├── Embryo10
+│   ├── Embryo10-1.fastq.gz
+│   └── Embryo10-2.fastq.gz
+├── Embryo11
+│   ├── Embryo11-1.fastq.gz
+│   └── Embryo11-2.fastq.gz
+├── Embryo2
+│   ├── Embryo2_S1_L001_I1_001.fastq.gz
+│   ├── Embryo2_S1_L001_R1_001.fastq.gz
+│   └── Embryo2_S1_L001_R2_001.fastq.gz
+├── Embryo3
+│   ├── Embryo3_S1_L001_I1_001.fastq.gz
+│   ├── Embryo3_S1_L001_R1_001.fastq.gz
+│   └── Embryo3_S1_L001_R2_001.fastq.gz
+├── Embryo4
+│   ├── Embryo4_S1_L001_I1_001.fastq.gz
+│   ├── Embryo4_S1_L001_R1_001.fastq.gz
+│   └── Embryo4_S1_L001_R2_001.fastq.gz
+├── Embryo5
+│   ├── Embryo5-1.fastq.gz
+│   └── Embryo5-2.fastq.gz
+├── Embryo6
+│   ├── Embryo6-1.fastq.gz
+│   └── Embryo6-2.fastq.gz
+├── Embryo7
+│   ├── Embryo7_S1_L001_I1_001.fastq.gz
+│   ├── Embryo7_S1_L001_R1_001.fastq.gz
+│   └── Embryo7_S1_L001_R2_001.fastq.gz
+├── Embryo8
+│   ├── Embryo8_S1_L001_I1_001.fastq.gz
+│   ├── Embryo8_S1_L001_R1_001.fastq.gz
+│   └── Embryo8_S1_L001_R2_001.fastq.gz
+├── Embryo9
+│   ├── Embryo9-1.fastq.gz
+│   └── Embryo9-2.fastq.gz
+├── MPlex1
+│   ├── MPlex1-1.fastq.gz
+│   └── MPlex1-2.fastq.gz
+├── MPlex2
+│   ├── MPlex2-1.fastq.gz
+│   └── MPlex2-2.fastq.gz
+├── MPlex3
+│   ├── MPlex3-1.fastq.gz
+│   └── MPlex3-2.fastq.gz
+└── MPlex4
+    ├── MPlex4-1.fastq.gz
+    └── MPlex4-2.fastq.gz
+
+The above partly worked (worked for some but not all of the samples : see 2_cellranger_make_matricies for details). 
+
+The 10x genomics website specifies that FASTQ filenames should conform to the following specification:
+
+```
+To serve as inputs for cellranger, FASTQ files should conform to the naming conventions of bcl2fastq and mkfastq:
+
+[Sample Name]_S1_L00[Lane Number]_[Read Type]_001.fastq.gz
+
+Where Read Type is one of:
+
+    I1: Sample index read (optional)
+    I2: Sample index read (optional)
+    R1: Read 1
+    R2: Read 2
+```
+
+Strangely, only some of the files were provided with names in this format. Therefore, I renamed to the following (Just inventing a lane number for those samples that did not have one):
+
+
+...Then reran, only those which failed. 
+
+
+
+15 directories, 36 files
+.
+├── Embryo1
+│   ├── Embryo1_S1_L001_I1_001.fastq.gz
+│   ├── Embryo1_S1_L001_R1_001.fastq.gz
+│   └── Embryo1_S1_L001_R2_001.fastq.gz
+├── Embryo10
+│   ├── Embryo10_S1_L001_R1_001.fastq.gz
+│   └── Embryo10_S1_L001_R2_001.fastq.gz
+├── Embryo11
+│   ├── Embryo11_S1_L001_R1_001.fastq.gz
+│   └── Embryo11_S1_L001_R2_001.fastq.gz
+├── Embryo2
+│   ├── Embryo2_S1_L001_I1_001.fastq.gz
+│   ├── Embryo2_S1_L001_R1_001.fastq.gz
+│   └── Embryo2_S1_L001_R2_001.fastq.gz
+├── Embryo3
+│   ├── Embryo3_S1_L001_I1_001.fastq.gz
+│   ├── Embryo3_S1_L001_R1_001.fastq.gz
+│   └── Embryo3_S1_L001_R2_001.fastq.gz
+├── Embryo4
+│   ├── Embryo4_S1_L001_I1_001.fastq.gz
+│   ├── Embryo4_S1_L001_R1_001.fastq.gz
+│   └── Embryo4_S1_L001_R2_001.fastq.gz
+├── Embryo5
+│   ├── Embryo5_S1_L001_R1_001.fastq.gz
+│   └── Embryo5_S1_L001_R2_001.fastq.gz
+├── Embryo6
+│   ├── Embryo6_S1_L001_R1_001.fastq.gz
+│   └── Embryo6_S1_L001_R2_001.fastq.gz
+├── Embryo7
+│   ├── Embryo7_S1_L001_I1_001.fastq.gz
+│   ├── Embryo7_S1_L001_R1_001.fastq.gz
+│   └── Embryo7_S1_L001_R2_001.fastq.gz
+├── Embryo8
+│   ├── Embryo8_S1_L001_I1_001.fastq.gz
+│   ├── Embryo8_S1_L001_R1_001.fastq.gz
+│   └── Embryo8_S1_L001_R2_001.fastq.gz
+├── Embryo9
+│   ├── Embryo9_S1_S001_R1_001.fastq.gz
+│   └── Embryo9_S1_S001_R2_001.fastq.gz
+├── MPlex1
+│   ├── MPlex1_S1_L001_R1_001.fastq.gz
+│   └── MPlex1_S1_L001_R2_001.fastq.gz
+├── MPlex2
+│   ├── MPlex2_S1_L001_R1_001.fastq.gz
+│   └── MPlex2_S1_L001_R2_001.fastq.gz
+├── MPlex3
+│   ├── MPlex3_S1_L001_R1_001.fastq.gz
+│   └── MPlex3_S1_L001_R2_001.fastq.gz
+└── MPlex4
+    ├── MPlex4_S1_L001_R1_001.fastq.gz
+    └── MPlex4_S1_L001_R2_001.fastq.gz
+
+15 directories, 36 files
